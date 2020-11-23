@@ -17,6 +17,7 @@ $ npm install
 ### Commands 
 in the Commands Folder you can add direct file or file inside file
 
+#### Files
 ```
 ├── Commands
 │   └── ping.js // example file
@@ -28,3 +29,37 @@ also you can do
 │   └── Settings
 │       └── ping.js
 ```
+
+#### Codes
+```js
+const { Client , Message } = require('discord.js')
+
+module.exports = class Ping {
+    name  = 'ping' // the main CommandName to run the Command , type : string
+    aliases = [] // here is the aliases which is another CommandName to run the Command , type : string
+    /**
+    * @param {Message} message // parameters
+    * @param {Client} client  // parameters
+    */
+    async run(client , message) {
+     // codes are here
+    }
+}
+```
+
+### Events 
+Events are the same as the commands 
+
+```
+├── Events
+│   └── message.js // example file
+```
+
+also you can do
+
+```
+├── Commands
+│   └── Message
+│       └── message.js
+```
+
