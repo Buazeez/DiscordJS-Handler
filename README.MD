@@ -15,7 +15,7 @@ $ npm install
 ## Usage
 
 ### Commands 
-in the Commands Folder you can add direct file or file inside file
+in the Commands Folder you can add direct file or file inside folder
 
 #### Files
 ```
