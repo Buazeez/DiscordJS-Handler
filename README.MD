@@ -50,6 +50,8 @@ module.exports = class Ping {
 ### Events 
 Events are the same as the commands 
 
+#### Files
+
 ```
 ├── Events
 │   └── message.js // example file
@@ -63,3 +65,20 @@ also you can do
 │       └── message.js
 ```
 
+#### Codes
+we will take the ready event for examble
+
+```js
+const { Client } = require('discord.js')
+
+module.exports = class ReadyEvent {
+    name = 'ready' // event name , it need to be exact in the documentation
+     /**
+     * @param {Client} client 
+     */
+ 
+    run(client) { // if in the event that you want to use more parameters , just next to the client
+
+    }
+}
+```
