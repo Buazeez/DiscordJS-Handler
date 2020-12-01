@@ -6,7 +6,7 @@ module.exports = async function CommandRegister(client , dir) {
     const files = await fs.readdir(startDir)
     files.forEach(async file => {
         const type = await fs.lstat(path.join(startDir , file))
-        if(type.isDirectory()) CommandRegister(path.join(dir , file))
+        if(type.isDirectory()) CommandRegister(client , path.join(dir , file))
         if(file.endsWith('.js')) {
             const Command = require(path.join(dir , file))
             const command = new Command()
