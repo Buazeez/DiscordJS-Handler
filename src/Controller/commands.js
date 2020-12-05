@@ -10,7 +10,6 @@ module.exports = async function CommandRegister(client , dir) {
         if(file.endsWith('.js')) {
             const Command = require(path.join(dir , file))
             const command = new Command()
-            console.log(command)
             client.commands.set(command.name , command)
             command.aliases.forEach((alias) => {
                 client.commands.set(alias , command)
